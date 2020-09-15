@@ -8,5 +8,12 @@
   <%= image_tag @user.avatar, style: "height: 100%; width: 100%;" %>
 </div>
 
+<% @user.houses.each do |house| %>
+  <div style="height: 500px; width: 500px;">
+    <%= image_tag house, style: "height: 100%; width: 100%;" %>
+  </div>
+<% end %>
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
